@@ -17,8 +17,11 @@ set number
 filetype plugin indent on
 set autoindent
 set smartindent
+inoremap {<CR>  {<CR>}<Esc>O
+set showmatch
 
 " Regex
+set magic
 set ignorecase
 set smartcase
 set hlsearch
@@ -63,3 +66,12 @@ map <C-Right> :tabn<cr>
 map <C-N> :tabnew<cr>
 map <C-S> :w<cr>| " Disable flow control (CTRL -S CTRL -Q) in Konsole
 map <C-W> :q<cr>
+
+" YouCompleteMe
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+" wildmenu
+set wildmenu
+set wildmode=longest:list,full
