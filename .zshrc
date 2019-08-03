@@ -63,7 +63,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases git-extras python tmux extract)
+plugins=(git common-aliases git-extras python tmux extract colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,3 +121,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda deactivate
+
+
+# java path
+export PATH=$HOME/bin/jre1.8.0_201/bin:$PATH
