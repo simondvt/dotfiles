@@ -56,7 +56,7 @@ let $PYTHONPATH="/usr/lib/python3.7/site-packages"
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-nmap <F6> :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
 
 " Tabs
 map <C-Up> :tabr<cr>
@@ -71,6 +71,8 @@ map <C-W> :q<cr>
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/.ycm_extra_conf.py'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+set completeopt-=preview
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"| " press Enter to complete
 
 " wildmenu
 set wildmenu
